@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import "../App.css";
+// import { Formik } from "formik";
 
 const initialState = {
   name: "",
@@ -126,11 +127,8 @@ const UserForm = ({ onSubmit }) => {
 
       state.name = " ";
       state.dob = " ";
-      state.gender = " ";
       state.mobile = " ";
-      state.govt1 = " ";
       state.govt2 = " ";
-      state.guard1 = " ";
       state.guard2 = " ";
       state.email = " ";
       state.emerg = " ";
@@ -140,9 +138,6 @@ const UserForm = ({ onSubmit }) => {
       state.country = " ";
       state.pincode = " ";
       state.occupation = " ";
-      state.religion = " ";
-      state.marital = " ";
-      state.blood = " ";
       state.nationality = " ";
     }
   };
@@ -222,8 +217,8 @@ const UserForm = ({ onSubmit }) => {
                     dispath({ type: "ONCHANGE5", payload: event.target.value })
                   }
                 >
-                  <option value="Male">Pan</option>
-                  <option value="Female">Adhar</option>
+                  <option value="Pan">Pan</option>
+                  <option value="Adhar">Adhar</option>
                   <option value="Other">Other</option>
                 </select>
               </td>
@@ -265,8 +260,8 @@ const UserForm = ({ onSubmit }) => {
                     dispath({ type: "ONCHANGE7", payload: event.target.value })
                   }
                 >
-                  <option value="Male">Neighbour</option>
-                  <option value="Female">Relative</option>
+                  <option value="Neighbour">Neighbour</option>
+                  <option value="Relative">Relative</option>
                 </select>
               </td>
               <td align="center">
@@ -408,9 +403,9 @@ const UserForm = ({ onSubmit }) => {
                     dispath({ type: "ONCHANGE17", payload: event.target.value })
                   }
                 >
-                  <option value="Male">Hindu</option>
-                  <option value="Female">Muslim</option>
-                  <option value="Female">Cristian</option>
+                  <option value="Hindu">Hindu</option>
+                  <option value="Muslim">Muslim</option>
+                  <option value="Cristian">Cristian</option>
                 </select>
               </td>
               <th> Marital Status : </th>
@@ -423,9 +418,9 @@ const UserForm = ({ onSubmit }) => {
                     dispath({ type: "ONCHANGE18", payload: event.target.value })
                   }
                 >
-                  <option value="Male">Married</option>
-                  <option value="Female">UnMarried</option>
-                  <option value="Female">Seperated</option>
+                  <option value="Married">Married</option>
+                  <option value="UnMarried">UnMarried</option>
+                  <option value="Seperated">Seperated</option>
                 </select>
               </td>
               <th> Blood Group : </th>
@@ -436,9 +431,9 @@ const UserForm = ({ onSubmit }) => {
                     dispath({ type: "ONCHANGE19", payload: event.target.value })
                   }
                 >
-                  <option value="Male">O+</option>
-                  <option value="Female">A+</option>
-                  <option value="Female">B+</option>
+                  <option value="O+">O+</option>
+                  <option value="A+">A+</option>
+                  <option value="B+">B+</option>
                 </select>
               </td>
             </tr>
